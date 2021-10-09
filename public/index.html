@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" href = "graphics/black_queen.png">
+    <script src = "./scripts/chess-logic.js" defer></script>
+    <script src = "./scripts/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/3b5d6f664a.js" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <title>CHESS</title>
+</head>
+<body>
+    
+
+
+    <div id = "board-container">
+
+        <div id = "settings-container">
+            <div class = "settings-container-label">
+                <div class="slider-label">Difficulty : Medium</div>
+                <div class="exit-container"><i class="far fa-window-close"></i></div>
+            </div>
+            <input type="range" min="1" max="100" value="50" class="slider" id="difficulty-slider">
+        </div>
+
+        <canvas id = "board-canvas"></canvas>
+
+        <div id = "image-dump">
+            <img id = "white-king"  class = "reference-image" src = "graphics/white_king.png">
+            <img id = "white-queen"  class = "reference-image" src = "graphics/white_queen.png">
+            <img id = "white-rook"  class = "reference-image" src = "graphics/white_rook.png">
+            <img id = "white-bishop"  class = "reference-image" src = "graphics/white_bishop.png">
+            <img id = "white-knight"  class = "reference-image" src = "graphics/white_knight.png">
+            <img id = "white-pawn"  class = "reference-image" src = "graphics/white_pawn.png">
+            <img id = "black-king"  class = "reference-image" src = "graphics/black_king.png">
+            <img id = "black-queen"  class = "reference-image" src = "graphics/black_queen.png">
+            <img id = "black-rook"  class = "reference-image" src = "graphics/black_rook.png">
+            <img id = "black-bishop"  class = "reference-image" src = "graphics/black_bishop.png">
+            <img id = "black-knight"  class = "reference-image" src = "graphics/black_knight.png">
+            <img id = "black-pawn"  class = "reference-image" src = "graphics/black_pawn.png">
+        </div>
+
+        <div class="control-container">
+                <i id = "resign"   class = "control-element fas fa-flag"></i>
+                <i id = "flip"     class = "control-element fas fa-random"></i>
+                <i id = "settings" class = "control-element fas fa-cog"></i>
+        </div>
+    </div>
+
+</body>
+</html>
